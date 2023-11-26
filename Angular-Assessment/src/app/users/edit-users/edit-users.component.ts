@@ -5,12 +5,13 @@ import { FormsModule, ReactiveFormsModule,
    UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { patchUserDetails, setUsers } from '../../store/usersSlice/users.actions';
-import { StoreDetails } from '../../store/store.state';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-edit-users',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule,
+    ReactiveFormsModule, MatProgressSpinnerModule],
   templateUrl: './edit-users.component.html',
   styleUrl: './edit-users.component.scss'
 })
@@ -33,7 +34,7 @@ export class EditUsersComponent implements OnInit {
     setTimeout(() => {
       this.showSpinner = false;
       this.store.dispatch(patchUserDetails({ data: this.userForm.value}));
-    }, 200);
+    }, 2000);
   }
 
   public initilizeForm() {

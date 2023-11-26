@@ -22,7 +22,10 @@
         </div>
     </form>
     <div class="action-buttons">
-        <button class="button pr-4" [disabled]="!userForm.dirty" (click)="onSubmit()">Save</button>
+        <button class="button pr-4" [disabled]="!userForm.dirty" (click)="onSubmit()">
+            <span *ngIf="!showSpinner">Save</span>
+            <mat-spinner color="black" diameter="30" *ngIf="showSpinner"></mat-spinner>
+        </button>
         <button class="button" (click)="initilizeForm()">Cancel</button>
     </div>
 </div>
