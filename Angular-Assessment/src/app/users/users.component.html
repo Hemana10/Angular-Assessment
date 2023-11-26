@@ -1,0 +1,12 @@
+<div class="mt-2">
+    <h1>User Management</h1>
+
+    <!-- User Details Accordions-->
+    <div *ngFor="let user of users$ | async">
+        <app-accordion title="{{user.firstName}} {{user.lastName}}"
+         description="{{user.email}}">
+            <app-edit-users [initFormDetails]="user"></app-edit-users>
+        </app-accordion>
+    </div>
+</div>
+

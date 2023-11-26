@@ -1,0 +1,28 @@
+<div>
+    <form [formGroup]="userForm" class="col-12 px-0 mb-3">
+        <div class="col-12 form-group my-3">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label class="mb-1" class="mb-2" for="firstName">First Name:</label><br>
+                <input id="firstName" type="text" formControlName="firstName">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label class="mb-1" class="mb-2" for="lastName">LastName:</label><br>
+                <input id="lastName" type="text" formControlName="lastName">
+            </div>
+        </div>
+        <div class="col-12 form-group my-3">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label class="mb-1" class="mb-2" for="email">Email Address:</label><br>
+                <input id="email" type="text" formControlName="email">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label class="mb-1" class="mb-2" for="phone">Mobile Number:</label><br>
+                <input id="phone" type="text" formControlName="phone">
+            </div>
+        </div>
+    </form>
+    <div class="action-buttons">
+        <button class="button pr-4" [disabled]="!userForm.dirty" (click)="onSubmit()">Save</button>
+        <button class="button" (click)="initilizeForm()">Cancel</button>
+    </div>
+</div>
