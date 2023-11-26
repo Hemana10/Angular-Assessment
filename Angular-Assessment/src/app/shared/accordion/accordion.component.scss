@@ -10,3 +10,19 @@
   .accordion-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
     margin-left: 8px;
   }
+
+  mat-expansion-panel-header {
+    flex-direction: row-reverse;
+  }
+
+ ::ng-deep mat-accordion mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator::after {
+  margin-bottom: 8px;
+ }
+
+ mat-panel-title {
+    margin-left: 10px;
+ }
+
+ mat-icon {
+  margin-right: 5px;
+ }
