@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { User } from '../user.model';
 import { FormsModule, ReactiveFormsModule,
    UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { patchUserDetails, setUsers } from '../../store/usersSlice/users.actions';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import { User } from '../user.model';
+import { patchUserDetails } from '../../store/usersSlice/users.actions';
 
 @Component({
   selector: 'app-edit-users',
@@ -30,6 +31,8 @@ export class EditUsersComponent implements OnInit {
   }
 
   public onSubmit() {
+    // adding manual delay to simulate api call delay
+    // patch call not allowed with the dumm api due to CORS error
     this.showSpinner = true;
     setTimeout(() => {
       this.showSpinner = false;

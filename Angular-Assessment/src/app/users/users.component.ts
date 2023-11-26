@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AccordionComponent } from '../shared/accordion/accordion.component';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+
+import { AccordionComponent } from '../shared/accordion/accordion.component';
 import { StoreDetails } from '../store/store.state';
 import { EditUsersComponent } from './edit-users/edit-users.component';
 
