@@ -1,1 +1,1 @@
-# Angular-Assessment
+# Simple Users Dashboard (Angular-NgRx)
